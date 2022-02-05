@@ -48,7 +48,7 @@ class DataTableExtensions extends Component {
       }, () => {
         this.checkHeader();
 
-        if (filter.length > 2) {
+        if (filter.length >= 0) {
           this.onFilter(filter);
         }
       });
@@ -84,7 +84,7 @@ class DataTableExtensions extends Component {
 
     let filtered = constData;
 
-    if (value.length > 2) {
+    if (value.length >= 0) {
       if (!filterHidden) {
         this.onDataRender();
       }
